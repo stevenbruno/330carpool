@@ -18,7 +18,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   		<a class="navbar-brand" href="index.html">
-  			<img src='logo.png' alt='home' width="50" height="30">
+  			<img class="homelogo" src='logo.png' alt='home'>
   		</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" 
   			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
@@ -55,29 +55,31 @@
 			Schedule a Ride
 		</div>
 		<div id="schedule-form">
-			<form>
+			<form id="primaryScheduleForm">
 				<b>Enter Origin</b><br>
-				<input type="radio" name="home" checked required> Default Home Address<br>
-				<input type="radio" name="home"> <input type="text" id="homeaddress" name="Address" 
-					placeholder="Enter Address"><br><br>
+				<!--<input type="radio" name="home" checked required> Default Home Address<br>
+				<input type="radio" name="home"> --> 
+				<input type="text" id="homeaddress" name="Address" 
+					placeholder="4321 DefaultUserOrigin, Evanston, IL"><br><br>
 				<b>Enter Destination</b> <br>
-				<input type="radio" name="work" checked required> Default Work Address<br>
-				<input type="radio" name="work"> <input type="text" id="destaddress" name="Address" 
-					placeholder="Enter Address"><br><br>
+				<!-- <input type="radio" name="work" checked required> Default Work Address<br>
+				<input type="radio" name="work"> -->	
+				<input type="text" id="destaddress" name="Address" 
+					placeholder="9876 DefaultUserDest, Chicago, IL"><br><br>
 				<b>Desired Arrival Time</b> <br>
-				<input type="date" name="date" min="2018-02-14" required> 
-				<input type="time" name ="time" required><br><br>
+				<input id="datepicker" type="date" name="date" min="2018-02-14" required> 
+				<input type="time" name="time" value="08:00" required><br><br>
 				I want to be a ... <br>
-				<input type="radio" name="driver" required> Driver         
-				<input type="radio" name="driver">Passenger<br><br>
-				<input type = "submit" onclick = "showForm()" value = "Make a return trip">
+				<input type="radio" name="driver" required> Driver          
+				<input type="radio" name="driver" value="" checked> Passenger <br><br>
+				<input type = "submit" onclick = "showReturnForm()" value = "Make a return trip">
 				<input type = "submit" id = "one-way" onclick = "scheduleRide()" value =
 					"Schedule one-way ride">
 			</form>
 			<div id="return">  <!-- hidden by default, putting this div inside parent for alignment -->
 				<form id = "return-form">
 					I want to leave work at ... <br>
-					<input type="time"> <br><br>
+					<input type="time" value="17:00"> <br><br>
 					<input type = "button" onclick="scheduleReturnRide()" value = 
 						"Schedule round-trip ride">
 				</form>
