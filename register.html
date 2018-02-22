@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<title>Schedule a Ride</title>
-	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="P5.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-    		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-    		crossorigin="anonymous">
-    <script src="https://maps.googleapis.com/maps/api/js?key=
-    	AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&libraries=places"></script>
-	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&callback=initMap"
-	type="text/javascript"></script> -->
+    		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places">
+    </script>
 </head>
 <body>
+	<form action="action_page.php">
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   		<a class="navbar-brand" href="index.html">
   			<img src='logo.png' alt='home' width="50" height="30">
@@ -50,40 +47,29 @@
     		</ul>
   		</div>
 	</nav>
-	<div class ="form-wrapper">
-		<div id="schedule-title">
-			Schedule a Ride
-		</div>
-		<div id="schedule-form">
-			<form>
-				<b>Enter Origin</b><br>
-				<input type="radio" name="home" checked required> Default Home Address<br>
-				<input type="radio" name="home"> <input type="text" id="homeaddress" name="Address" 
-					placeholder="Enter Address"><br><br>
-				<b>Enter Destination</b> <br>
-				<input type="radio" name="work" checked required> Default Work Address<br>
-				<input type="radio" name="work"> <input type="text" id="destaddress" name="Address" 
-					placeholder="Enter Address"><br><br>
-				<b>Desired Arrival Time</b> <br>
-				<input type="date" name="date" min="2018-02-14" required> 
-				<input type="time" name ="time" required><br><br>
-				I want to be a ... <br>
-				<input type="radio" name="driver" required> Driver         
-				<input type="radio" name="driver">Passenger<br><br>
-				<input type = "submit" onclick = "showForm()" value = "Make a return trip">
-				<input type = "submit" id = "one-way" onclick = "scheduleRide()" value =
-					"Schedule one-way ride">
-			</form>
-			<div id="return">  <!-- hidden by default, putting this div inside parent for alignment -->
-				<form id = "return-form">
-					I want to leave work at ... <br>
-					<input type="time"> <br><br>
-					<input type = "button" onclick="scheduleReturnRide()" value = 
-						"Schedule round-trip ride">
-				</form>
-			</div>
-		</div>
-	</div>
+	</div>	
+	  <div class="container">
+		<label for="uname"><b>Username</b></label>
+		<input type="text" placeholder="Enter Username" name="uname" required>
+
+		<label for="name"><b>Full name</b></label>
+		<input type="text" placeholder="Enter first name" name="name" required>
+		<input type="text" placeholder="Enter Last name" name="name" required>
+
+		<label for="mobile"><b>Mobile Number</b></label>
+		<input type="text" placeholder="Enter Mobile Number" name="mobile" required>
+
+
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Enter Password" name="psw" required>
+
+		<button type="submit">Sign Up</button>
+
+	  </div>
+
+
+	</form> 
+	
 	<script src = P5.js></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
 			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
