@@ -1,3 +1,9 @@
+// sets default arrival date to tomorrow
+var tomorrow = new Date()
+tomorrow.setDate(tomorrow.getDate() + 1)
+document.getElementById("datepicker").valueAsDate = tomorrow;
+
+
 function scheduleRide() {
 	window.alert("One-way ride scheduled!");
  }
@@ -7,9 +13,9 @@ function scheduleRide() {
  function scheduleReturnRide() {
 	window.alert("Round-trip ride scheduled!");
  }
-
-
- function showForm() {
+ function showReturnForm() {
+ 	debugger;
+ 	document.getElementById("primaryScheduleForm").style.display = "none";
  	document.getElementById("one-way").style.display = "none";
  	document.getElementById("return").style.display = "block";
  }

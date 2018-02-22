@@ -2,10 +2,18 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.homelogo {
+	width: 60px;
+	height: 60px;
+	margin: 0;
+	margin-left: 0.75rem;
+}
+
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
+    padding: 0 !important; /*theres probably a better way to do this */
 }
 
 .form-wrapper {
