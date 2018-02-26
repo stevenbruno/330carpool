@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chinedu Okoroafor</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="P5.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="index.html">
+        <img class="homelogo" src='logo.png' alt='home'>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" onclick = "loadProfile()">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Upcoming Rides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ride History</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Preferences</a>
+                  <a class="dropdown-item" href="#">Payment</a>
+                  <a class="dropdown-item" onclick = "logout()">Logout</a>
+              </div>
+            </li>
+        </ul>
+      </div>
+  </nav>
+<!--<div class = "prof-wrapper">
+	<div id = "profile-header"> My Profile </div>
+	<p>Default Home Address: 2228 Sherman Ave, Evanston IL 60201<p/> 
+	<p>Default Work Address: 2400 Sheridan Road, Evanston IL 60201<p/> 
+</div>
+-->
+<div class = "card">
+	<img src = "prof2.jpg" style = "width: 100%" alt = "Chinedu">
+	<h1> Chinedu Okoroafor </h1>
+	<p class = "prof-title"> General Information </p>
+	<p> <b>Phone Number:</b> 111-123-4567 </p>
+	<p> <b>Driver Miles:</b> 89 miles </p>
+	<p> <b>Passenger Miles:</b> 32 miles </p>
+	<p>Rating</p>
+	<div class = stars>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	 <button data-toggle="collapse" data-target="#homeinfo">Default Home Address</button>
+		<div class = "collapse" id = "homeinfo">
+			<p id = "var1">2228 Sherman Avenue, Evanston IL, 60201</p>
+		</div>
+	<button data-toggle = "collapse" data-target = "#workinfo">Default Work Address</button>
+		<div class = "collapse" id = "workinfo">
+			<p id = "var2">2400 Sheridan Road, Evanston IL, 60201</p>
+		</div>
+	<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="loadDefaults()">Update Default Addresses</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Update Default Addresses</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        	<b>Home Address</b>
+        	<input type="text" id="homeaddress1" name="Address"><br><br>
+			<b>Work Address</b>
+			<input type="text" id="workaddress1" name="Address"><br><br>
+
+        </form>
+
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="updateAddress()">Update</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal"">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div></p>
+	
+</div>
+
+
+<script src = P5.js></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+			crossorigin="anonymous"></script>
+	
+</body>
+</html>
