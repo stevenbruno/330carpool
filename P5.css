@@ -34,6 +34,10 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#return_dropdown_arrow {
+    vertical-align: middle;
+    margin-top: -2px;
+}
 
 /* Full-width inputs */
 input[type=text], input[type=password] {

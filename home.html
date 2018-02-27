@@ -12,9 +12,7 @@
     		crossorigin="anonymous">
     <script src="https://maps.googleapis.com/maps/api/js?key=
     	AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&libraries=places"></script>
-	<!-- <script async defer src = 
-		"https://maps.googleapis.com/maps/api/js?key=AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&callback=initMap"
-		type="text/javascript"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
@@ -59,7 +57,7 @@
 			Schedule a Ride
 		</div>
 		<div id="schedule-form">
-			<form id="primaryScheduleForm">
+			<form id="primaryScheduleForm" action='ride_confirmation.html'>
 				<p> <b>Today, I will be a ...<b></p>
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-primary">
@@ -73,33 +71,23 @@
 					</label> 
 				</div><br><br>
 				<b>Enter Origin</b><br>
-				<!--<input type="radio" name="home" checked required> Default Home Address<br>
-				<input type="radio" name="home"> --> 
 				<input type="text" id="homeaddress" name="Address" 
-					placeholder="4321 DefaultUserOrigin, Evanston, IL"><br><br>
-				<b>Enter Destination</b> <br>
-				<!-- <input type="radio" name="work" checked required> Default Work Address<br>
-				<input type="radio" name="work"> -->	
+					placeholder="4321 DefaultUserOrigin, Evanston, IL" required><br><br>
+				<b>Enter Destination</b> <br>	
 				<input type="text" id="destaddress" name="Address" 
-					placeholder="9876 DefaultUserDest, Chicago, IL"><br><br>
+					placeholder="9876 DefaultUserDest, Chicago, IL" required><br><br>
 				<b>Desired Arrival Time</b> <br>
 				<input id="datepicker" type="date" name="date" min="2018-02-14" required> 
 				<input type="time" name="time" value="08:00" required><br><br>
  				<a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" 
  					aria-expanded="false" aria-controls="collapseExample">
-    				Make a Return Trip
-  				</a>
-  			    </p>
+    				Schedule a Return Trip <i id="return_dropdown_arrow" class="material-icons">&#xE5C5;</i>
+  				</a><br><br>
 				<div class="collapse" id="collapseExample">
-					<div>
-						<form id = "return-form">
 							I want to leave work at ... <br>
-							<input type="time" value="17:00"> <br><br>
-						</form>
-					</div>  
-				</div>
-				<input type="button" class="btn btn-primary" onclick="scheduleRide()" value = 
-								"Schedule ride">
+							<input type="time" value="17:00"> <br><br>	  
+				</div> 
+				<input id="scheduleSubmit" type="submit" class="btn btn-primary btn-success" value="Schedule Ride">
 			</form>
 		</div>
 	</div> <br>

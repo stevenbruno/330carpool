@@ -5,7 +5,7 @@ document.getElementById("datepicker").valueAsDate = tomorrow;
 
 
 function scheduleRide() {
-	window.alert("One-way ride scheduled!");
+	window.alert("Ride scheduled!");
  }
  //For future prototypes this will need to add the ride to "Scheduled Rides", but we don't need to for P5
 
@@ -13,13 +13,6 @@ function scheduleRide() {
  function scheduleReturnRide() {
 	window.alert("Round-trip ride scheduled!");
  }
- function showReturnForm() {
- 	debugger;
- 	document.getElementById("primaryScheduleForm").style.display = "none";
- 	document.getElementById("one-way").style.display = "none";
- 	document.getElementById("return").style.display = "block";
- }
-
 
  function initialize() {
   var input1 = document.getElementById("homeaddress");
@@ -32,11 +25,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function landing_login() {
 		if (document.getElementById('uname').value == "sfreedman14" && document.getElementById("psw").value == "password") {
-			window.location.href='home.html';
+			window.location.replace('home.html');
 		} else {
 			document.getElementById('incorrect').style.display = 'block';
 		}
 }
+
+// $(document).ready(function() {
+// 	$("#scheduleSubmit").submit(function() {
+// 		window.location.replace('ride_confirmation.html');
+// 	});
+// });
 
 // function login() {
 // 		if (document.getElementById("uname").value == "sfreedman")  
