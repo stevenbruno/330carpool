@@ -31,12 +31,6 @@ function landing_login() {
 		}
 }
 
-// $(document).ready(function() {
-// 	$("#scheduleSubmit").submit(function() {
-// 		window.location.replace('ride_confirmation.html');
-// 	});
-// });
-
 // function login() {
 // 		if (document.getElementById("uname").value == "sfreedman")  
 // 		{
