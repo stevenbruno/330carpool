@@ -3,7 +3,6 @@ var tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
 document.getElementById("datepicker").valueAsDate = tomorrow;
 
-
 function scheduleRide() {
 	window.alert("Ride scheduled!");
  }
@@ -24,12 +23,33 @@ function scheduleRide() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function landing_login() {
-		if (document.getElementById('uname').value == "sfreedman14" && document.getElementById("psw").value == "password") {
-			window.location.replace('home.html');
-		} else {
-			document.getElementById('incorrect').style.display = 'block';
-		}
+	debugger;
+	if (document.getElementById('uname').value == "sfreedman14" && document.getElementById("psw").value == "password") {
+		var username = "sfreedman14";
+		localStorage.setItem("username", username);
+		window.location.replace('home.html');
+	} else if (document.getElementById('uname').value == "cokoroafor" && document.getElementById("psw").value == "shnoyes") {
+		var username = "cokoroafor";
+		localStorage.setItem("username", username);
+		window.location.replace('home.html'); 
+	} else {
+		document.getElementById('incorrect').style.display = 'block';
+	}
 }
+
+function load_profile() {
+	debugger;
+	var username = localStorage.getItem("username");
+	if (username == "sfreedman14") {
+		window.location.href='my_profile.html';
+	} else if (username == "cokoroafor") {
+		window.location.href='prof2.html';
+	} else {
+		window.location.replace('Profile.html');
+	}
+	return false; 
+}
+
 
 // function login() {
 // 		if (document.getElementById("uname").value == "sfreedman")  
