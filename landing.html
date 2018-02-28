@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
             crossorigin="anonymous">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="P5.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places">
+    </script>
 </head>
-<body id="landing">
+<body>
     <div class="jumbotron">
         <h1 class="display-4">Making Carpools Easy</h1>
         <p class="lead"> Getting you from point A to point B, 
@@ -22,21 +21,15 @@
         <p style="text-align:center;">Log in below or 
             <a href="register.html">Sign Up</a> to get started.
         </p>
-        <div class="alert alert-warning" role="alert" style="text-align: center;">
-            <strong>Demo Page Credentials:</strong><br />
-            [Username: sfreedman14 &nbsp&nbsp Password: password] &nbsp or &nbsp 
-            [Username: cokoroafor &nbsp&nbsp Password: shnoyes]
-        </div>
         <div class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text" id='uname' placeholder="Enter Username" name="uname" required>
+            <input type="text" placeholder="Enter Username" name="uname" required>
             <label for="psw"><b>Password</b></label>
-            <input type="password" id='psw' placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw" required>
             <label>
-            <input type="checkbox" name="remember"> Remember me
+              <input type="checkbox" checked="checked" name="remember"> Remember me
             </label> <br>
-            <p id="incorrect">Incorrect username or password, try again.</p>
-            <button type="button" class="btn btn-primary" onclick="landing_login()">Enter</button>
+            <p><a class="btn btn-primary btn-lg" href="index.html" role="button">Login</a></p>
             <p> Forgot <a href="#">password?</a></p>
         </div>
     </div>
