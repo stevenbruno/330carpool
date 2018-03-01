@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Schedule a Ride</title>
-    <link rel="stylesheet" type="text/css" href="P5.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  <title>Schedule a Ride</title>
+  <link rel="stylesheet" type="text/css" href="P5.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-            crossorigin="anonymous">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="P5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+      crossorigin="anonymous">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="P5.js"></script>
 </head>
 <body id="landing">
-    <div class="jumbotron">
-        <h1 class="display-4">Making Carpools Easy</h1>
-        <p class="lead"> Getting you from point A to point B, 
-            whether you're driving or just along for the ride.</p>
-        <hr class="my-4">
-        <p style="text-align:center;">Log in below or 
-            <a href="register.html">Sign Up</a> to get started.
-        </p>
-        <div class="alert alert-warning" role="alert" style="text-align: center;">
-            <strong>Demo Page Credentials:</strong><br />
-            [Username: sfreedman14 &nbsp&nbsp Password: password] &nbsp or &nbsp 
-            [Username: cokoroafor &nbsp&nbsp Password: shnoyes]
-        </div>
-        <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" id='uname' placeholder="Enter Username" name="uname" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" id='psw' placeholder="Enter Password" name="psw" required>
-            <label>
-            <input type="checkbox" name="remember"> Remember me
-            </label> <br>
-            <p id="incorrect">Incorrect username or password, try again.</p>
-            <button type="button" class="btn btn-primary" onclick="landing_login()">Enter</button>
-            <p> Forgot <a href="#">password?</a></p>
-        </div>
+  <div class="jumbotron">
+    <h1 class="display-4">Making Carpools Easy</h1>
+    <p class="lead"> Getting you from point A to point B, 
+        whether you're driving or just along for the ride.</p>
+    <hr class="my-4">
+    <p style="text-align:center;">Log in below or 
+      <a href="register.html">Sign Up</a> to get started.
+    </p>
+    <div class="alert alert-warning" role="alert" style="text-align: center;">
+      <strong>Demo Page Credentials:</strong><br />
+      [Username: sfreedman14 &nbsp&nbsp Password: password] &nbsp or &nbsp 
+      [Username: cokoroafor &nbsp&nbsp Password: shnoyes]
     </div>
-    <script src = P5.js></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-            crossorigin="anonymous"></script>
-    </body>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id='uname' placeholder="Enter Username" name="uname" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id='psw' placeholder="Enter Password" name="psw" required>
+      <label>
+      <input type="checkbox" name="remember"> Remember me
+      </label> <br>
+      <p id="incorrect">Incorrect username or password, try again.</p>
+      <button type="button" class="btn btn-primary" onclick="landing_login()">Enter</button>
+      <p> Forgot <a href="#">password?</a></p>
+    </div>
+  </div>
+  <script src = P5.js></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+      crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+      crossorigin="anonymous"></script>
+  </body>
 </html>
