@@ -18,6 +18,7 @@ function scheduleRide() {
   var input2 = document.getElementById("destaddress");
   new google.maps.places.Autocomplete(input1);
   new google.maps.places.Autocomplete(input2);
+  var cancelnum = 0;
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -108,6 +109,30 @@ function updateAddress() {
 		document.getElementById("var2").innerHTML = document.getElementById("workaddress1").value;
 	}
 
+}
+
+var ridenum;
+function rideVar(x) {
+	ridenum = x;
+}
+
+function cancelRide(){ 
+	cancelnum = 0;
+	if (ridenum == 1) {
+		document.getElementById("ride1").style.display = 'none';
+		cancelnum = cancelnum++;
+	}
+	if (ridenum == 2) {
+		document.getElementById("ride2").style.display = 'none';
+		cancelnum = cancelnum + 1;
+	}
+	if (ridenum == 3) {
+		document.getElementById("ride3").style.display = 'none';
+		cancelnum = cancelnum + 1;
+	}
+	if (document.getElementById("ride1").style.display == 'none' && document.getElementById("ride2").style.display == 'none' && document.getElementById("ride3").style.display == 'none') {
+		document.getElementById("norides").style.display = "block";
+	}
 }
 
 var coll = document.getElementsByClassName("collapsible");
