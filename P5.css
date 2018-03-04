@@ -203,3 +203,19 @@ span.psw {
        -moz-box-shadow: 0 10px 6px -6px #777;
             box-shadow: 0 10px 6px -6px #777;
 }
+
+
+
+#my_rating_wrapper {
+min-height: 500px;
+    text-align: left;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+
+
+
+
