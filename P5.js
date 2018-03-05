@@ -51,7 +51,9 @@ function load_profile() {
 	return false; 
 }
 
-
+function refreshpage(){
+	window.location.reload()
+}
 // function login() {
 // 		if (document.getElementById("uname").value == "sfreedman")  
 // 		{
