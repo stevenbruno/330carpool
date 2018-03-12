@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sam Freedman</title>
+  <title>Elizabeth Johnson</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="P5.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -56,61 +56,97 @@
     </div>
   </nav>
   <div class = "card">
-    <img src = "prof1.jpg" style = "width: 100%" alt = "Sam">
-    <h1> Sam Freedman </h1>
-    <div class = "prof-title"> 
-      <p> <b>Phone Number:</b> 111-123-4567 </p>
-      <p> <b>Driver Miles:</b> 116 miles </p>
-      <p> <b>Passenger Miles:</b> 57 miles </p>
+    <img src = "elizabeth.jpg" style = "width: 100%" alt = "Sam">
+    <h1> Elizabeth Johnson </h1>
+    <p class = "prof-title"> General Information </p>
+    <p> <b>Phone Number:</b> 123-098-4567 </p>
+    <p> <b>Driver Miles:</b> 4,532 miles </p>
+    <p> <b>Passenger Miles:</b> 90 miles </p>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
+    Review
+  </button><br>
+<!--   <div class = stars>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div> -->
+
+    <!-- message feature -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" 
+        data-target="#exampleModal" data-whatever="Elizabeth">Message</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
-      Ratings
-    </button>   -->  
-   <!--  <div class = stars>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-    </div>  -->
+    <!-- end of message feature -->
+
     <div id="accordion" role="tablist" aria-multiselectable="true">
       <div class="card">
         <div class="card-header" role="tab" id="headingOne">
           <h5 class="mb-0">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" 
+              aria-expanded="false" aria-controls="collapseOne">
             Default Home Address
           </a>
           </h5>
         </div>
         <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
           <div id="var1" class="card-block">
-            2228 Sherman Avenue, Evanston IL, 60201
+            2238 Sherman Avenue, Evanston IL, 60201
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header" role="tab" id="headingTwo">
           <h5 class="mb-0">
-          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" 
+              aria-expanded="false" aria-controls="collapseTwo">
             Default Work Address
           </a>
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div id="var2" class="card-block">
-            911 Foster St, Evanston, IL 60201
+            988 Foster St, Evanston, IL 60201
           </div>
         </div>
       </div>
     </div>
     <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
-        onclick="loadDefaults()">Update Default Addresses
-    </button>
+<!--     <p> Trigger the modal with a button
+ -->  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
+      onclick="loadDefaults()">Update Default Addresses</button>
+
+    <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
+        <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
+            
             <h4 class="modal-title">Update Default Addresses</h4>
           </div>
           <div class="modal-body">
@@ -127,19 +163,27 @@
           </div>
         </div>
       </div>
-    </div><br>
+    </div>
+
     <!-- Modal for rating -->
-    <div id="my_rating_wrapper" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content" id= "my_rating_wrapper">
-        <h3>Ratings</h3><!-- start Star Ratings and Reviews -->
-        <script data-sil-id='5a9c789eb2632c002df20155'> (function() {var d = document, w = window, l = window.location,p = l.protocol == 'file:' ? 'http://' : '//';if (!w.WS) w.WS = {}; c = w.WS;var m=function(t, o){  var e = d.getElementsByTagName('script'); e=e[e.length-1];  var n = d.createElement(t); if (t=='script') {n.async=true;} for (k in o) n[k] = o[k];  e.parentNode.insertBefore(n, e)};   m('script', {      src: p+'bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155?page='+encodeURIComponent(l+''),      type: 'text/javascript'  });  c.load_net = m;})();</script>
-        <script type='application/ld+json' src='//bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155/microdata'></script>
-        <div class='sil-widget-star-rating sil-widget' id='sil-widget-5a9c789eb2632c002df20155'><a href='https://bawkbox.com/install/star-rating'>Star Ratings and Reviews</a></div>
+
+  <div id="my_rating_wrapper" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+      <div class="modal-content" id= "my_rating_wrapper">
+      <h3>Ratings</h3><!-- start Star Ratings and Reviews -->
+      <script data-sil-id='5a9c789eb2632c002df20155'> (function() {var d = document, w = window, l = window.location,p = l.protocol == 'file:' ? 'http://' : '//';if (!w.WS) w.WS = {}; c = w.WS;var m=function(t, o){  var e = d.getElementsByTagName('script'); e=e[e.length-1];  var n = d.createElement(t); if (t=='script') {n.async=true;} for (k in o) n[k] = o[k];  e.parentNode.insertBefore(n, e)};   m('script', {      src: p+'bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155?page='+encodeURIComponent(l+''),      type: 'text/javascript'  });  c.load_net = m;})();</script>
+      <script type='application/ld+json' src='//bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155/microdata'></script>
+      <div class='sil-widget-star-rating sil-widget' id='sil-widget-5a9c789eb2632c002df20155'><a href='https://bawkbox.com/install/star-rating'>Star Ratings and Reviews</a></div>
+<!-- end Star Ratings and Reviews -->
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refreshpage()">Close</button>
+        </div>
+
         </div>
       </div>
     </div>
+  </div>
+ 
   </div>
   <script src = P5.js></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
