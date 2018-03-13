@@ -147,6 +147,7 @@ function arrowToggle(){
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+("#time_picker").dateTimeSelector();
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
