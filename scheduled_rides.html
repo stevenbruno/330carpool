@@ -28,7 +28,7 @@
           <a class="nav-link" href="home.html">Schedule a Ride</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
+          <a class="nav-link" href="scheduled_rides.html"><b>Upcoming Rides</b></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="ride_history.html">Ride History</a>
@@ -46,7 +46,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item disabled" href="#">Preferences</a>
             <a class="dropdown-item disabled" href="#">Payment</a>
-            <a class="dropdown-item disabled" href="#">Logout</a>
+            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -113,8 +113,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" 
-              data-dismiss="modal" onclick="cancelRide()">Cancel</button>
+          <button type="button" class="btn btn-danger" 
+              data-dismiss="modal" onclick="cancelRide()">Cancel Ride</button>
           <button type="button" class="btn btn-primary" data-dismiss="modal"">Go back</button>
         </div>
       </div>

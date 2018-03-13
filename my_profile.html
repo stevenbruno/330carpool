@@ -3,7 +3,6 @@
 <head>
   <title>Sam Freedman</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="P5.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
@@ -12,6 +11,7 @@
       crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
       4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="P5.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="P5.js"></script>
 </head>
@@ -39,7 +39,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" id='proflink' href='' onclick="return load_profile()">My Profile</a>
+          <a class="nav-link" id='proflink' href='' onclick="return load_profile()"><b>My Profile</b></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
@@ -49,7 +49,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item disabled" href="#">Preferences</a>
             <a class="dropdown-item disabled" href="#">Payment</a>
-            <a class="dropdown-item disabled" href="#">Logout</a>
+            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -60,8 +60,8 @@
     <h1> Sam Freedman </h1>
     <div class = "prof-title"> 
       <p> <b>Phone Number:</b> 111-123-4567 </p>
-      <p> <b>Driver Miles:</b> 116 miles </p>
-      <p> <b>Passenger Miles:</b> 57 miles </p>
+      <p> <b>Driver Miles:</b> 116 </p>
+      <p> <b>Passenger Miles:</b> 57 </p>
     </div>
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
       Ratings
