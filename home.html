@@ -26,9 +26,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="home.html">Schedule a Ride</a>
+          <a class="nav-link" href="home.html"><b>Schedule a Ride</b></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
@@ -36,6 +36,8 @@
         <li class="nav-item">
           <a class="nav-link" href="ride_history.html">Ride History</a>
         </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" id='proflink' href='' onclick="return load_profile()">My Profile</a>
         </li>
@@ -44,10 +46,10 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Account 
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Preferences</a>
-            <a class="dropdown-item" href="#">Payment</a>
-            <a class="dropdown-item" href="#">Logout</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item disabled" href="#">Preferences</a>
+            <a class="dropdown-item disabled" href="#">Payment</a>
+            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -58,9 +60,10 @@
       Schedule a Ride
     </div>
     <div id="schedule-form">
-      <form id="primaryScheduleForm" action='ride_confirmation.html'>
+
+      <form id="primaryScheduleForm" action='scheduled_rides.html'>
         <p> <b>Today, I will be a ...<b></p>
-        <div class="btn-group" data-toggle="buttons">
+        <div class="btn-group" role="group" data-toggle="buttons">
           <label class="btn btn-primary">
             <input type="radio" name="options" id="option1" autocomplete="off"> Driver
           </label>
@@ -70,7 +73,8 @@
           <label class="btn btn-primary active">
             <input type="radio" name="options" id="option3" autocomplete="off" checked> No Preference
           </label> 
-        </div><br><br>
+        </div>
+        <br><br>
         <b>Enter Origin</b><br>
         <input type="text" id="homeaddress" name="Address" 
             placeholder="4321 DefaultUserOrigin, Evanston, IL" required><br><br>
@@ -78,11 +82,11 @@
         <input type="text" id="destaddress" name="Address" 
             placeholder="9876 DefaultUserDest, Chicago, IL" required><br><br>
         <b>Desired Arrival Time</b> <br>
-        <input id="datepicker" type="date" name="date" min="2018-02-14" required> 
+        <input id="datepicker" type="date" name="date" min="2018-03-14" required> 
         <input type="time" name="time" value="08:00" required><br><br>
         <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" 
-            aria-expanded="false" aria-controls="collapseExample">
-            Schedule a Return Trip <i id="return_dropdown_arrow" class="material-icons">&#xE5C5;</i>
+            aria-expanded="false" aria-controls="collapseExample" onclick="arrowToggle()">
+            Schedule a Return Trip <i id="return_dropdown_arrow" class="material-icons">expand_more</i>
         </a><br><br>
         <div class="collapse" id="collapseExample">
           I want to leave work at ... <br>

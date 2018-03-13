@@ -24,7 +24,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="home.html">Schedule a Ride</a>
         </li>
@@ -32,20 +32,22 @@
           <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ride_history.html">Ride History</a>
+          <a class="nav-link" href="ride_history.html"><b>Ride History</b></a>
         </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="my_profile.html">My Profile</a>
+          <a class="nav-link" id='proflink' href='' onclick="return load_profile()">My Profile</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Account 
+              Account 
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Preferences</a>
-            <a class="dropdown-item" href="#">Payment</a>
-            <a class="dropdown-item" href="#">Logout</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item disabled" href="#">Preferences</a>
+            <a class="dropdown-item disabled" href="#">Payment</a>
+            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -66,19 +68,26 @@
           <th scope="row">Feb 29</th>
           <td>2420 Campus Dr, Evanston, IL 60201</td>
           <td>636 Church Ave, Evanston, IL 60201</td>
-          <td>Elizabeth, Miguel</td>
+          <td>
+            <a href="elizabeth.html">
+              Elizabeth,
+            </a>
+            <a href="miguel.html">
+              Miguel
+            </a>
+          </td>
         </tr>
         <tr>
           <th scope="row">Feb 28</th>
           <td>2420 Campus Dr, Evanston, IL 60201</td>
           <td>Sargent Hall, Evanston, IL 60201</td>
-          <td>Kelly</td>
+          <td><a href="kelly.html">Kelly</a></td>
         </tr>
         <tr>
           <th scope="row">Feb 24</th>
           <td>1300 Orrington Ave, Evanston, IL 60201</td>
           <td>Willis Tower, Chicago, IL 60606</td>
-          <td><a href='prof2.html'>Chinedu</a></td> 
+          <td><a href='kelly.html'>Kelly</a></td> 
         </tr>
       </tbody>
     </table>
