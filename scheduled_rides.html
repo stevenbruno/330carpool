@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Scheduled Rides</title>
@@ -23,28 +23,30 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="home.html">Schedule a Ride</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
+          <a class="nav-link" href="scheduled_rides.html"><b>Upcoming Rides</b></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="ride_history.html">Ride History</a>
         </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="my_profile.html">My Profile</a>
+          <a class="nav-link" id='proflink' href='' onclick="return load_profile()">My Profile</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Account 
+              Account 
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Preferences</a>
-            <a class="dropdown-item" href="#">Payment</a>
-            <a class="dropdown-item" href="#">Logout</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item disabled" href="#">Preferences</a>
+            <a class="dropdown-item disabled" href="#">Payment</a>
+            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -66,24 +68,39 @@
           <th scope="row">Mar 5, 8:00AM</th>
           <td>2420 Campus Dr, Evanston, IL 60201</td>
           <td>636 Church Ave, Evanston, IL 60201</td>
-          <td>Roger</td>
+          <td>
+            <a href="elizabeth.html">
+              Elizabeth
+            </a>
+          </td>
           <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(1)"><i class = "material-icons">clear</i></button>
         </tr>
         <tr id = "ride2">
           <th scope="row">Mar 5, 5:30PM</th>
           <td>636 Church Ave, Evanston, IL 60201</td>
           <td>2420 Campus Dr, Evanston, IL 60201</td>
-          <td>Roger</td>
+          <td>
+            <a href="miguel.html">
+              Miguel
+            </a>
+          </td>
           <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(2)"><i class = "material-icons">clear</i></button>
         </tr>
         <tr id = "ride3">
           <th scope="row">Mar 9, 9:00AM</th>
           <td>1300 Orrington Ave, Evanston, IL 60201</td>
           <td>Willis Tower, Chicago, IL 60606</td>
-          <td>Juan, Jamie</td> 
+          <td>
+            <a href="elizabeth.html">
+              Elizabeth,    
+            </a>
+            <a href="kelly.html">
+              Kelly
+            </a>
+          </td> 
           <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(3)"><i class = "material-icons">clear</i></button>
         </tr>
-         <tr id = "norides" style = "display: none;"> <td colspan="5"> No scheduled rides!</td> </tr>
+        <tr id = "norides" style = "display: none;"> <td colspan="5"> No scheduled rides!</td> </tr>
       </tbody>
     </table>
 
@@ -96,8 +113,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" 
-              data-dismiss="modal" onclick="cancelRide()">Cancel</button>
+          <button type="button" class="btn btn-danger" 
+              data-dismiss="modal" onclick="cancelRide()">Cancel Ride</button>
           <button type="button" class="btn btn-primary" data-dismiss="modal"">Go back</button>
         </div>
       </div>

@@ -87,11 +87,10 @@ function refreshpage(){
 // 	else {window.location.href = "index.html";}
 // }
 
-// function logout() {
-// 	sessionStorage.profile = null;
-// 	window.location.href = "Profile.html"
-// 	console.log(sessionStorage.profile)
-// }
+function logout() {
+	sessionStorage.profile = null;
+	window.location.href = "index.html"
+}
 
 function editInfo() {
 	
@@ -134,6 +133,15 @@ function cancelRide(){
 	}
 	if (document.getElementById("ride1").style.display == 'none' && document.getElementById("ride2").style.display == 'none' && document.getElementById("ride3").style.display == 'none') {
 		document.getElementById("norides").style.display = "block";
+	}
+}
+
+function arrowToggle(){
+	if (document.getElementById("return_dropdown_arrow").innerHTML == "expand_less") {
+		document.getElementById("return_dropdown_arrow").innerHTML = "expand_more";
+	}
+	else {
+		document.getElementById("return_dropdown_arrow").innerHTML = "expand_less";
 	}
 }
 
