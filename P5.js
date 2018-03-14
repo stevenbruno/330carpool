@@ -27,8 +27,8 @@ function landing_login() {
 	debugger;
 	if (document.getElementById('uname').value == "sfreedman14" && document.getElementById("psw").value == "password") {
 		var username = "sfreedman14";
-		localStorage.setItem("username", username);
-		window.location.replace('home.html');
+		window.location.replace('home.html');		localStorage.setItem("username", username);
+
 	} else if (document.getElementById('uname').value == "cokoroafor" && document.getElementById("psw").value == "shnoyes") {
 		var username = "cokoroafor";
 		localStorage.setItem("username", username);
@@ -147,6 +147,7 @@ function arrowToggle(){
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+("#time_picker").dateTimeSelector();
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
