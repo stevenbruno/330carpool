@@ -3,10 +3,9 @@ var tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
 document.getElementById("datepicker").valueAsDate = tomorrow;
 
-function scheduleRide() {
-	window.alert("Ride scheduled!");
- }
- //For future prototypes this will need to add the ride to "Scheduled Rides", but we don't need to for P5
+// function scheduleRide() {
+// 	window.alert("Ride scheduled!");
+//  }
 
 
  function scheduleReturnRide() {

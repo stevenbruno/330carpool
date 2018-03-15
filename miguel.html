@@ -49,75 +49,36 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item disabled" href="#">Preferences</a>
             <a class="dropdown-item disabled" href="#">Payment</a>
-            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
+            <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
     </div>
   </nav>
   <div class = "card">
-    <img src = "miguel.jpg" id = "image_wrapper" style = "width: 100%" alt = "Sam">
+    <img src = "Miguel.jpg" style = "width: 100%" alt = "Miguel">
     <h1> Miguel </h1>
-    <p> <b>Phone Number:</b> 421-908-8483 </p>
-    <p> <b>Driver Miles:</b> 0 </p>
-    <p> <b>Passenger Miles:</b> 940  </p>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
-    Ratings
-  </button>    
-<!--   <div class = stars>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-    </div> -->
-    <div id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="headingOne">
-          <h5 class="mb-0">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Default Home Address
-          </a>
-          </h5>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div id="var1" class="card-block">
-            2008 Sherman Avenue, Evanston IL, 60201
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="headingTwo">
-          <h5 class="mb-0">
-          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Default Work Address
-          </a>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div id="var2" class="card-block">
-            711 Foster St, Evanston, IL 60201
-          </div>
-        </div>
-      </div>
+    <div class="profinfo">
+      <p> <b>Driver Miles:</b> 0 </p>
+      <p> <b>Passenger Miles:</b> 10,000 </p>
     </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
+      Reviews
+    </button>
     <br>
-<!--     <p> Trigger the modal with a button
- -->  
-<!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
-      onclick="loadDefaults()">Update Default Addresses</button> -->
-
-    <!-- Modal -->
+  
+    <!-- Update Info Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
-        <!-- Modal content-->
+      <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            
-            <h4 class="modal-title">Update Default Addresses</h4>
+            <h4 class="modal-title">Update User Information</h4>
           </div>
           <div class="modal-body">
             <form>
+              <b> Phone Number </b>
+              <input type="text" id ="phonenum" name="Address"><br><br>
               <b>Home Address</b>
               <input type="text" id="homeaddress1" name="Address"><br><br>
               <b>Work Address</b>
@@ -125,33 +86,26 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="updateAddress()">Update</button>
+            <button type="button" class="btn btn-default" 
+                data-dismiss="modal" onclick="updateAddress()">Update</button>
             <button type="button" class="btn btn-default" data-dismiss="modal"">Close</button>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
     <!-- Modal for rating -->
-
   <div id="my_rating_wrapper" class="modal fade" role="dialog">
     <div class="modal-dialog">
-    <!-- Modal content-->
       <div class="modal-content" id= "my_rating_wrapper">
       <h3>Ratings</h3><!-- start Star Ratings and Reviews -->
       <script data-sil-id='5a9c789eb2632c002df20155'> (function() {var d = document, w = window, l = window.location,p = l.protocol == 'file:' ? 'http://' : '//';if (!w.WS) w.WS = {}; c = w.WS;var m=function(t, o){  var e = d.getElementsByTagName('script'); e=e[e.length-1];  var n = d.createElement(t); if (t=='script') {n.async=true;} for (k in o) n[k] = o[k];  e.parentNode.insertBefore(n, e)};   m('script', {      src: p+'bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155?page='+encodeURIComponent(l+''),      type: 'text/javascript'  });  c.load_net = m;})();</script>
       <script type='application/ld+json' src='//bawkbox.com/widget/star-rating/5a9c789eb2632c002df20155/microdata'></script>
       <div class='sil-widget-star-rating sil-widget' id='sil-widget-5a9c789eb2632c002df20155'><a href='https://bawkbox.com/install/star-rating'>Star Ratings and Reviews</a></div>
-<!-- end Star Ratings and Reviews -->
-        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refreshpage()">Close</button>
-        </div>
-
-        </div>
+      <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refreshpage()">Close</button>
       </div>
     </div>
   </div>
-<!--     </p>  
- -->  </div>
   <script src = P5.js></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
