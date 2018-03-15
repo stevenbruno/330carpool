@@ -97,12 +97,16 @@ function editInfo() {
 }
 
 function loadDefaults() {
+	document.getElementById("phonenum").placeholder = document.getElementById("phone").innerHTML;
 	document.getElementById("homeaddress1").placeholder = document.getElementById("var1").innerHTML;
 	document.getElementById("workaddress1").placeholder = document.getElementById("var2").innerHTML;
 
 }
 
 function updateAddress() {
+	if (document.getElementById("phonenum").value) {
+		document.getElementById("phone").innerHTML = document.getElementById("phonenum").value; 
+	}
 	if (document.getElementById("homeaddress1").value) {
 		document.getElementById("var1").innerHTML = document.getElementById("homeaddress1").value;
 	}

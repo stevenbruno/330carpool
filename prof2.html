@@ -62,7 +62,7 @@
 <div class = "card">
   <img src = "prof2.jpg" style = "width: 100%" alt = "Chinedu">
   <h1> Chinedu Okoroafor </h1>
-  <p> <b>Phone Number:</b> 111-123-4567 </p>
+  <p> <b>Phone Number:</b> <span id="phone">111-123-4567</span></p>
   <p> <b>Driver Miles:</b> 89 </p>
   <p> <b>Passenger Miles:</b> 32 </p>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
@@ -87,8 +87,7 @@
       </div>
       <div id="collapseOne" class="collapse" role="tabpanel" 
           aria-labelledby="headingOne">
-        <div id="var1" class="card-block">
-          2228 Sherman Avenue, Evanston IL, 60201
+        <div id="var1" class="card-block">2228 Sherman Avenue, Evanston IL, 60201
         </div>
       </div>
     </div>
@@ -102,15 +101,14 @@
         </h5>
       </div>
       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-        <div id="var2" class="card-block">
-        2400 Sheridan Road, Evanston, IL 60201
+        <div id="var2" class="card-block">2400 Sheridan Road, Evanston, IL 60201
         </div>
       </div>
     </div>
   </div>
   <br>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
-      onclick="loadDefaults()">Update Default Addresses</button>
+      onclick="loadDefaults()">Update Information</button>
 
 <!-- Modal -->
   <div id="myModal" class="modal fade" role="dialog">
@@ -122,6 +120,8 @@
         </div>
         <div class="modal-body">
           <form>
+            <b> Phone Number </b>
+            <input type="text" id = "phonenum" name="Address"><br><br>
             <b>Home Address</b>
             <input type="text" id="homeaddress1" name="Address"><br><br>
             <b>Work Address</b>

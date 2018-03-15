@@ -59,7 +59,7 @@
     <img src = "prof1.jpg" style = "width: 100%" alt = "Sam">
     <h1> Sam Freedman </h1>
     <div class = "prof-title"> 
-      <p> <b>Phone Number:</b> 111-123-4567 </p>
+      <p> <b>Phone Number:</b> <span id = "phone">111-123-4567</span></p>
       <p> <b>Driver Miles:</b> 116 </p>
       <p> <b>Passenger Miles:</b> 57 </p>
     </div>
@@ -83,8 +83,7 @@
           </h5>
         </div>
         <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div id="var1" class="card-block">
-            2228 Sherman Avenue, Evanston IL, 60201
+          <div id="var1" class="card-block">2228 Sherman Avenue, Evanston IL, 60201
           </div>
         </div>
       </div>
@@ -97,15 +96,14 @@
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div id="var2" class="card-block">
-            911 Foster St, Evanston, IL 60201
+          <div id="var2" class="card-block">911 Foster St, Evanston, IL 60201
           </div>
         </div>
       </div>
     </div>
     <br>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
-        onclick="loadDefaults()">Update Default Addresses
+        onclick="loadDefaults()">Update Information
     </button>
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
