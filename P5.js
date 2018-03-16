@@ -17,10 +17,13 @@ document.getElementById("datepicker").valueAsDate = tomorrow;
   var input2 = document.getElementById("destaddress");
   new google.maps.places.Autocomplete(input1);
   new google.maps.places.Autocomplete(input2);
+
   var cancelnum = 0;
 }
 
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 function landing_login() {
 	debugger;
