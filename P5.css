@@ -126,13 +126,16 @@ span.psw {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 450px;
     margin: auto;
     text-align: center;
     position: relative;
-    top: 20px;
-    
-    
+    top: 20px;    
+}
+
+.profinfo {
+    text-align: left;
+    padding-left: 1rem;
 }
 
 .prof-title {
@@ -211,15 +214,37 @@ min-height: 500px;
     max-width: 950px;
     margin: 0 auto;
     padding: 20px;
-
 }
 
-#image_wrapper{
+#image_wrapper {
     width: 135px;
     height: 250px;
+}
 
-
+.footer {
+    -webkit-box-shadow: 0 -4px 6px -6px #999;
+    -moz-box-shadow: 0 -4px 6px -6px #999;
+    box-shadow: 0 -4px 6px -6px #999;
+    background-color: #e3f2fd;
+    border-top: 1px solid grey;
+    height: 2rem;
+    line-height: 2rem;
+    margin-top: 3rem;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+    color: grey;
 }
 
 
+[type='radio'] {
+    display: none; 
+}
 
+#ratingsButton {
+    margin: 0 3rem 0rem 3rem;
+}
+
+#updateInfoButton {
+    margin: 0 3rem 1rem 3rem;
+}

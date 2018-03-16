@@ -3,6 +3,7 @@
 <head>
   <title>Sam Freedman</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="P5.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
@@ -11,7 +12,6 @@
       crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
       4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="P5.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="P5.js"></script>
 </head>
@@ -49,7 +49,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item disabled" href="#">Preferences</a>
             <a class="dropdown-item disabled" href="#">Payment</a>
-            <a class="dropdown-item disabled" href="#" onclick="logout()">Logout</a>
+            <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
           </div>
         </li>
       </ul>
@@ -58,63 +58,33 @@
   <div class = "card">
     <img src = "prof1.jpg" style = "width: 100%" alt = "Sam">
     <h1> Sam Freedman </h1>
-    <div class = "prof-title"> 
-      <p> <b>Phone Number:</b> 111-123-4567 </p>
-      <p> <b>Driver Miles:</b> 116 </p>
-      <p> <b>Passenger Miles:</b> 57 </p>
+    <div class="profinfo">
+      <p> <b>Phone Number:</b> <span id="phone">111-123-4567</span></p>
+      <p> <b>Home Address:</b> <span id="var1">2228 Sherman Ave. Evanston, IL 60201</span></p>
+      <p> <b>Work Address:</b> <span id="var2">911 Foster St. Evanston, IL 60201</span></p>
+      <p> <b>Driver Miles:</b> 4,000 </p>
+      <p> <b>Passenger Miles:</b> 660 </p>
     </div>
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
-      Ratings
-    </button>   -->  
-   <!--  <div class = stars>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span>
-    </div>  -->
-    <div id="accordion" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="headingOne">
-          <h5 class="mb-0">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Default Home Address
-          </a>
-          </h5>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div id="var1" class="card-block">
-            2228 Sherman Avenue, Evanston IL, 60201
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="headingTwo">
-          <h5 class="mb-0">
-          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Default Work Address
-          </a>
-          </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div id="var2" class="card-block">
-            911 Foster St, Evanston, IL 60201
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
-        onclick="loadDefaults()">Update Default Addresses
+    <button id="ratingsButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#my_rating_wrapper">
+      Reviews
     </button>
+    <br>
+    <button id="updateInfoButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
+        onclick="loadDefaults()">Update Information
+    </button>
+  
+    <!-- Update Info Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
+      <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Update Default Addresses</h4>
+            <h4 class="modal-title">Update User Information</h4>
           </div>
           <div class="modal-body">
             <form>
+              <b> Phone Number </b>
+              <input type="text" id = "phonenum" name="Address"><br><br>
               <b>Home Address</b>
               <input type="text" id="homeaddress1" name="Address"><br><br>
               <b>Work Address</b>
@@ -122,12 +92,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="updateAddress()">Update</button>
+            <button type="button" class="btn btn-default" 
+                data-dismiss="modal" onclick="updateAddress()">Update</button>
             <button type="button" class="btn btn-default" data-dismiss="modal"">Close</button>
           </div>
         </div>
       </div>
-    </div><br>
+    </div>
+  </div>
     <!-- Modal for rating -->
     <div id="my_rating_wrapper" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -140,6 +112,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer">
   </div>
   <script src = P5.js></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 

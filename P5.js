@@ -3,10 +3,9 @@ var tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
 document.getElementById("datepicker").valueAsDate = tomorrow;
 
-function scheduleRide() {
-	window.alert("Ride scheduled!");
- }
- //For future prototypes this will need to add the ride to "Scheduled Rides", but we don't need to for P5
+// function scheduleRide() {
+// 	window.alert("Ride scheduled!");
+//  }
 
 
  function scheduleReturnRide() {
@@ -97,12 +96,16 @@ function editInfo() {
 }
 
 function loadDefaults() {
+	document.getElementById("phonenum").placeholder = document.getElementById("phone").innerHTML;
 	document.getElementById("homeaddress1").placeholder = document.getElementById("var1").innerHTML;
 	document.getElementById("workaddress1").placeholder = document.getElementById("var2").innerHTML;
 
 }
 
 function updateAddress() {
+	if (document.getElementById("phonenum").value) {
+		document.getElementById("phone").innerHTML = document.getElementById("phonenum").value; 
+	}
 	if (document.getElementById("homeaddress1").value) {
 		document.getElementById("var1").innerHTML = document.getElementById("homeaddress1").value;
 	}
