@@ -216,10 +216,10 @@ min-height: 500px;
     padding: 20px;
 }
 
-#image_wrapper {
+/*#image_wrapper {
     width: 135px;
-    height: 250px;
-}
+    height: 350px;
+}*/
 
 .footer {
     -webkit-box-shadow: 0 -4px 6px -6px #999;

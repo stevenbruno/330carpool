@@ -3,10 +3,27 @@ var tomorrow = new Date()
 tomorrow.setDate(tomorrow.getDate() + 1)
 document.getElementById("datepicker").valueAsDate = tomorrow;
 
+
+//var today = new Date()
+//today.setDate(today.getDate());
+//document.getElementById("datepicker").min = today;
 // function scheduleRide() {
 // 	window.alert("Ride scheduled!");
 //  }
 
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("datepicker").setAttribute("min", today);
 
  function scheduleReturnRide() {
 	window.alert("Round-trip ride scheduled!");
@@ -17,10 +34,13 @@ document.getElementById("datepicker").valueAsDate = tomorrow;
   var input2 = document.getElementById("destaddress");
   new google.maps.places.Autocomplete(input1);
   new google.maps.places.Autocomplete(input2);
+
   var cancelnum = 0;
 }
 
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 function landing_login() {
 	debugger;

@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
+  <script src="https://maps.googleapis.com/maps/api/js?key=
+  AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="P5.js"></script>
 </head>
@@ -55,7 +59,7 @@
   </nav>
 
   <div class = "card">
-    <img src = "prof2.jpg" style = "width: 100%" alt = "Chinedu">
+    <img src = "prof2.jpg" id = "image_wrapper" style = "width: 100%" alt = "Chinedu">
     <h1> Chinedu Okoroafor </h1>
     <div class="profinfo">
       <p> <b>Phone Number:</b> <span id="phone">111-123-4567</span></p>
@@ -85,9 +89,13 @@
               <b> Phone Number </b>
               <input type="text" id = "phonenum" name="Address"><br><br>
               <b>Home Address</b>
-              <input type="text" id="homeaddress1" name="Address"><br><br>
+              <input type="text" id="homeaddress_prof2" name="Address"><br><br>
+
+
+
+              </script>
               <b>Work Address</b>
-              <input type="text" id="workaddress1" name="Address"><br><br>
+              <input type="text" id="workaddress_prof2" name="Address"><br><br>
             </form>
           </div>
           <div class="modal-footer">
